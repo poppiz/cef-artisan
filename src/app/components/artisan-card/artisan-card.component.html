@@ -1,0 +1,17 @@
+<div class="mt-4 mx-auto shadow rounded" style="width: 18rem">
+  <a routerLink="/details/{{ artisanInterface.id }}"
+    ><div class="card" style="width: 18rem">
+      <img
+        class="card-img-top"
+        src="/assets/images/artisan.png"
+        alt="Card image cap"
+      />
+      <div class="card-body text-center">
+        <h5 class="card-title">{{ artisanInterface.name }}</h5>
+        <p>Spécialitée : {{ artisanInterface.speciality }}</p>
+        <p>Localisation : {{ artisanInterface.location }}</p>
+        <rating [stars]="artisanInterface.note"></rating>
+      </div>
+    </div>
+  </a>
+</div>

@@ -1,0 +1,50 @@
+.main {
+  padding: 0 3em;
+}
+
+.notice {
+  color: #0074c7;
+
+  .img {
+    width: 55%;
+    border-radius: 20px;
+  }
+
+  .list {
+    list-style: number;
+    li {
+      margin-top: 1em;
+    }
+  }
+}
+
+.separator {
+  border-top: 0.9em solid #0074c7;
+  border-radius: 10px;
+  width: 15%;
+}
+
+@media (min-width: 768px) {
+  .separator {
+    width: 10%;
+  }
+}
+
+@media (min-width: 992px) {
+  .notice {
+    .img {
+      width: 40%;
+      border-radius: 30px;
+    }
+  }
+
+  .separator {
+    width: 9%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .separator {
+    width: 6%;
+  }
+}

@@ -1,0 +1,37 @@
+p {
+  margin-top: 2em;
+  .intitule {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+}
+
+.form {
+  width: 20rem;
+  margin: 2em auto;
+  @media (min-width: 992px) {
+    width: 30rem;
+  }
+  form {
+    background-color: #f1f8fc;
+    padding: 2em;
+    textarea {
+      resize: none;
+      height: 10em;
+    }
+  }
+
+  .form-group {
+    margin-top: 2em;
+  }
+  button {
+    margin-top: 2em;
+    padding: 0.5em 1em;
+    background-color: #0074c7;
+    color: white;
+
+    &:hover {
+      background-color: #00497c;
+    }
+  }
+}
