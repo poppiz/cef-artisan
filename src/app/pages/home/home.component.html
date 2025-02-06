@@ -1,0 +1,37 @@
+<app-nav></app-nav>
+<body class="main">
+  <div class="notice">
+    <h1 class="title">Comment trouver mon artisan ?</h1>
+    <div class="d-lg-flex pt-lg-5">
+      <!-------- IMAGE    -->
+      <img
+        class="img d-block mx-auto my-5 shadow"
+        src="assets/images/image-notice.jpg"
+        alt="personne qui utilise un ordinateur"
+      />
+
+      <!------- NOTICE -->
+      <div class="my-5 my-lg-auto mx-lg-auto">
+        <ul class="list py-lg-auto">
+          <li>Choisir la catégorie d'artisanat dans le menu</li>
+          <li class="py-3">Choisir un artisan</li>
+          <li class="pb-3">Le contacter via le formulaire de contact</li>
+          <li>Une réponse sera apportée sous 48h</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="separator mt-4"></div>
+
+  <!------- ARTISANS DU MOIS -->
+  <h2 class="title">Artisans du mois</h2>
+  <div class="my-5 d-lg-flex">
+    <app-artisan-card
+      class="mx-lg-auto"
+      *ngFor="let artisans of artisansList"
+      [artisanInterface]="artisans"
+    ></app-artisan-card>
+  </div>
+</body>
+<app-footer></app-footer>

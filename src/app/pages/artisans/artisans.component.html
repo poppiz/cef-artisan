@@ -1,0 +1,23 @@
+<app-nav (searchButtonClick)="filterResult()"></app-nav>
+<body>
+  <h2 class="title pt-5 pb-4 font-weight-bold">
+    catégorie : {{ artisansService.filter }}
+  </h2>
+
+  <div *ngIf="artisansService.filter !== 'recherche'">
+    <app-artisan-card
+      *ngFor="
+        let artisans of artisansList | filter : this.artisansService.filter
+      "
+      [artisanInterface]="artisans"
+    >
+    </app-artisan-card>
+  </div>
+  <div *ngIf="artisansService.filter === 'recherche'">
+    <app-artisan-card
+      *ngFor="let artisans of filteredArtisansList"
+      [artisanInterface]="artisans"
+    ></app-artisan-card>
+  </div>
+</body>
+<app-footer></app-footer>

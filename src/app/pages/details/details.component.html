@@ -1,0 +1,82 @@
+<app-nav></app-nav>
+<body>
+  <div class="text-center">
+    <h2 class="title my-5 font-weight-bold">votre artisan :</h2>
+
+    <!--------- IMAGE -->
+    <img src="/assets/images/artisan.png" alt="image/logo artisan" />
+
+    <!---------- STARS           -->
+    <rating [stars]="artisanInterface.note"></rating>
+
+    <!------------- DESCRIPTION   -->
+    <p class="title text-uppercase pt-5 pb-4 font-weight-bold">
+      {{ artisanInterface.name }}
+    </p>
+    <p>
+      <span class="intitule">Spécialitée</span> :
+      {{ artisanInterface.speciality }}
+    </p>
+    <p>
+      <span class="intitule">Localisation</span> :
+      {{ artisanInterface.location }}
+    </p>
+    <p><span class="intitule">À propos</span> : {{ artisanInterface.about }}</p>
+    <p>
+      <span class="intitule">Email</span> :
+      <a href="mailto:{{ artisanInterface.email }}">{{
+        artisanInterface.email
+      }}</a>
+    </p>
+  </div>
+  <div class="form pt-4">
+    <h2 class="title text-uppercase my-54 font-weight-bold text-center">
+      Le contacter :
+    </h2>
+
+    <!------------ CONTACT FORM        -->
+    <form class="shadow rounded my-5">
+      <div class="form-group">
+        <label for="name">Nom :</label>
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          aria-describedby="emailHelp"
+          placeholder="Nom"
+        />
+      </div>
+      <div class="form-group">
+        <label for="email">Email :</label>
+        <input
+          type="email"
+          class="form-control"
+          id="email"
+          placeholder="Email"
+        />
+      </div>
+      <div class="form-group">
+        <label for="Motif">Motif du mail :</label>
+        <input
+          type="text"
+          class="form-control"
+          id="motif"
+          aria-describedby="emailHelp"
+          placeholder="Motif du mail"
+        />
+      </div>
+      <div class="form-group">
+        <label for="text">Votre mail :</label>
+        <textarea name="text" id="text" class="form-control"></textarea>
+      </div>
+      <button
+        (click)="send(); $event.preventDefault()"
+        type="button"
+        class="d-block mx-auto rounded border-0"
+      >
+        Envoyer
+      </button>
+    </form>
+  </div>
+</body>
+<app-footer></app-footer>
